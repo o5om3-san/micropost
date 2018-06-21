@@ -20,8 +20,8 @@ class CreateUserFavTable extends Migration
             $table->timestamps();
             
             //foreign key setting
-            $table->foreign('user_id')->refrences('id')->on('users')->onDelete('cascade');
-            $table->foreign('fav_id')->refrences('id')->on('microposts')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('fav_id')->references('id')->on('microposts')->onDelete('cascade');
             
             $table->unique(['user_id', 'fav_id']);
         });
