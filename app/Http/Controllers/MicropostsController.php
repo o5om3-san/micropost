@@ -25,7 +25,7 @@ class MicropostsController extends Controller
                 'microposts' => $microposts,
             ];
         }
-        return view('welcome', $data);
+        return view('welcome',$data);
     }
     
     public function store(Request $request)
@@ -51,4 +51,4 @@ class MicropostsController extends Controller
 
         return redirect()->back();
     }
-}
+} 
